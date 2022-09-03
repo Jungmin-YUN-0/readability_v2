@@ -3,7 +3,7 @@
 WARMUP_UPDATES=60
 LR=1e-05                # Peak LR for polynomial LR scheduler.
 SRC=~/readability/text_augmentation/TransformersDataAugmentation/src
-BART_PATH=~/bart.large
+BART_PATH=~/readability/text_augmentation/TransformersDataAugmentation/src/utils/bart.large
 CACHE=~/CACHE
 PREFIXSIZE=3
 MAXEPOCH=30
