@@ -24,6 +24,9 @@ def get_labels(dataset_name, to_lower=True):
     elif task_name == "snips":
         labels = ["PlayMusic", "GetWeather", "RateBook", "SearchScreeningEvent",
                 "SearchCreativeWork", "AddToPlaylist", "BookRestaurant"]
+    elif task_name == "onestopeng":
+        labels = ['Elementary', 'Intermediate','Advanced']
+        
     else:
         raise ValueError("unknown dataset {}".format(dataset_name))
     if to_lower:
