@@ -13,7 +13,7 @@ for NUMEXAMPLES in 10;
 do
     for i in {0..14};
     do
-    RAWDATADIR=~/datasets/${TASK}/exp_${i}_${NUMEXAMPLES}
+    RAWDATADIR=~/readability/text_augmentation/TransformersDataAugmentation/src/utils/datasets/${TASK}/exp_${i}_${NUMEXAMPLES}
     DATABIN=$RAWDATADIR/jointdatabin
 
     splits=( train dev )
