@@ -220,7 +220,7 @@ def compute_dev_loss(model, dev_dataloader):
         _, input_ids, input_mask, masked_ids, label_lengths = batch
         inputs = {'input_ids': batch[1],
                   'attention_mask': batch[2],
-                  'masked_lm_labels': batch[3]}
+                  'labels': batch[3]} #'masked_lm_labels': batch[3]}
 
         outputs = model(**inputs)
         loss = outputs[0]
@@ -357,7 +357,7 @@ def train_cmodbertp_and_augment(args):
             _, input_ids, input_mask, masked_ids, label_lengths = batch
             inputs = {'input_ids': batch[1],
                       'attention_mask': batch[2],
-                      'masked_lm_labels': batch[3]}
+                      'labels': batch[3]} #'masked_lm_labels': batch[3]}
 
             outputs = model(**inputs)
             loss = outputs[0]
