@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 
-SRC=~/readability/text_augmentation/TransformersDataAugmentation/src
-CACHE=~/CACHE
+SRC=/home/jungmin/readability/text_augmentation/TransformersDataAugmentation/src
+CACHE=/home/jungmin/readability/text_augmentation/TransformersDataAugmentation/CACHE
+
 TASK=onestopeng
 
 for NUMEXAMPLES in 10;
 do
     for i in {0..14};
         do
-        RAWDATADIR=~/readability/text_augmentation/TransformersDataAugmentation/src/utils/datasets/${TASK}/exp_${i}_${NUMEXAMPLES}
+        RAWDATADIR=$SRC/utils/datasets/${TASK}/exp_${i}_${NUMEXAMPLES}
         BERTLR=1e-4
        # Baseline classifier
         python $SRC/bert_aug/bert_classifier.py --task $TASK  --data_dir $RAWDATADIR --seed ${i} --learning_rate $BERTLR --batch_size 4 --cache $CACHE > $RAWDATADIR/bert_baseline.log
